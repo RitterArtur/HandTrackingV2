@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/PseudoHapticWeight.unity
+    guid: 67d13d73cf9a27449bc2ffc7d6958a5e
+  - enabled: 1
+    path: Assets/Scenes/Model-based Haptics.unity
+    guid: ce7a43056ed247c4489976de0e0bad18
+  - enabled: 1
+    path: Assets/Scenes/Camera-based Haptics.unity
+    guid: 7679d028eae2a5041a1274f8d5029d59
+  - enabled: 1
+    path: Assets/Scenes/Model-based Haptics_reverse.unity
+    guid: 599d9c50d3d10714cb55650ffe075a52
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 7e56e35b2e2049d45b2008c74dde1061,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b3859e1833c772f4d9a29d5cc4d4293a,
+      type: 2}
