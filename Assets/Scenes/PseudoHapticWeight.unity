@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed83361f396e6214b95b99a1784d6753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0.5
+  weight: 0.4
 --- !u!1 &12145975 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1455334885196165053, guid: 056b9bcff79922e4580d1f977635b5bb,
@@ -391,8 +391,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   taskOrder:
-  - {fileID: 1996274239}
   - {fileID: 1078501386}
+  - {fileID: 1996274239}
 --- !u!4 &356897486
 Transform:
   m_ObjectHideFlags: 0
@@ -1469,7 +1469,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed83361f396e6214b95b99a1784d6753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weight: 0.75
+  weight: 0.6
 --- !u!65 &1072881445 stripped
 BoxCollider:
   m_CorrespondingSourceObject: {fileID: 1797792289462211316, guid: 056b9bcff79922e4580d1f977635b5bb,
@@ -3237,7 +3237,7 @@ PrefabInstance:
     - target: {fileID: 2067024227366506096, guid: d778a39156fdd4446a054d67509358d8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.962
+      value: -2.775
       objectReference: {fileID: 0}
     - target: {fileID: 2067024227366506096, guid: d778a39156fdd4446a054d67509358d8,
         type: 3}

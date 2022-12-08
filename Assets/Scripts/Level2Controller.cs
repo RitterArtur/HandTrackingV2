@@ -21,7 +21,7 @@ public class Level2Controller : abstractLevelController
         lHand = GameObject.Find("LeftHand").GetComponent<HandMaterialScript>();
         rHand = GameObject.Find("RightHand").GetComponent<HandMaterialScript>();
         copperMaterial = (Material)Resources.Load("Materials/Copper");
-        GameObject.Find("OculusInteractionRig").transform.position = new Vector3(2.27f,0f,0.2f);
+        //GameObject.Find("OculusInteractionRig").transform.position = new Vector3(2.27f,0f,0.2f);
     }
 
 
