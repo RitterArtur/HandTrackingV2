@@ -12,9 +12,11 @@ public class HandMaterialScript : MonoBehaviour
     float timeElapsed;
     private bool copperGrabbed;
     private bool cold;
+    private bool inUse;
     // Start is called before the first frame update
     void Start()
     {
+        inUse = GlobalFunctions.Instance.areVHsInUse();
         meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
         if (this.name.Contains("Left"))
             ocMaterial = (Material)Resources.Load("Materials/LeftOculusHand");
@@ -40,9 +42,9 @@ public class HandMaterialScript : MonoBehaviour
 
     void updateMaterials()
     {
-        if(!GlobalFunctions.Instance.areVHsInUse())
-                return;
-                
+        if (!inUse)
+            return;
+
         Material[] mats;
         if (copperGrabbed)
         {

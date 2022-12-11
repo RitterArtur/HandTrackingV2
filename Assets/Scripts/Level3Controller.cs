@@ -12,12 +12,11 @@ public class Level3Controller : abstractLevelController
 
         protected override void handleSequence(){
         if(currentTaskNumber == 0){
-            currentTaskNumber++;
+           
             GlobalFunctions.Instance.WriteDebugText( "Task fully completed");
             GameObject.Find("Key").transform.position = GameObject.Find("KeyPosition").transform.position;
         }
         else if(currentTaskNumber == 1){
-           currentTaskNumber++;
             GameObject.Find("DoorLeft").GetComponent<BoxCollider>().enabled = true;
             GameObject.Find("DoorRight").GetComponent<BoxCollider>().enabled = true;
             Destroy(GameObject.Find("DoorLock"));

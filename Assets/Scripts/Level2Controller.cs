@@ -50,6 +50,7 @@ public class Level2Controller : abstractLevelController
             copperMaterial.SetColor("_EmissionColor", new Color(0.0f, 0.0f, 0.0f, 1.0f) * -10.0f);
             copperMaterial.DisableKeyword("_EMISSION");
             SoundManager.instance.Play("Ding");
+
         }
         else if(currentTaskNumber == 2){
             GameObject.Find("DoorLeft").GetComponent<BoxCollider>().enabled = true;
@@ -63,6 +64,8 @@ public class Level2Controller : abstractLevelController
 
     public void onGrabLevelEvent(GameObject caller, GameObject item)
     {
+        if (!GlobalFunctions.Instance.areVHsInUse())
+            return;
 
 
         if (item.name == "CopperBar" || item.name.Contains("Key"))

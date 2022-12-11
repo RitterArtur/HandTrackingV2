@@ -23,6 +23,9 @@ public class HudEffectTriggerParticle : HUDEffects
     // Update is called once per frame
     void Update()
     {
+        if (!GlobalFunctions.Instance.areVHsInUse())
+            return;
+
         if (inArea)
         {
             foreach (GameObject child in children)

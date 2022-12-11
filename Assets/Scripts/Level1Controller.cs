@@ -14,6 +14,7 @@ public class Level1Controller : abstractLevelController
         GameObject.Find("OculusInteractionRig").transform.position = new Vector3(0f,0f,0f);
         key = GameObject.Find("Key");
         key.GetComponent<Grabbable>().enabled = false;
+        
     }
 
 

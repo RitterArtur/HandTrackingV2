@@ -36,7 +36,10 @@ public class HandPoseChecker : MonoBehaviour
 
         if( (grabAPI.IsHandPalmGrabbing(GrabbingRule.DefaultPalmRule)||grabAPI.IsHandPinchGrabbing(GrabbingRule.DefaultPinchRule) ) 
             && handGrabInteractor.HasSelectedInteractable){
-           handMaterial.SetFloat("_FresnelPower", 0.2f );
+
+            if (!GlobalFunctions.Instance.areVHsInUse())
+                return;
+            handMaterial.SetFloat("_FresnelPower", 0.2f );
 
             //will check interactable for parent and search meshes from there. Needed if Interactables are structered like in OVR Framework
            if(handGrabInteractor.Interactable.gameObject.transform.parent.gameObject != null){

@@ -5,10 +5,12 @@ using UnityEngine;
 public class HUDEffectTrigger : HUDEffects
 {
     public Material stoneMaterial;
+    private bool inUse;
 
     // Start is called before the first frame update
     void Start()
     {
+        inUse = GlobalFunctions.Instance.areVHsInUse();
         children = new List<GameObject>();
         lHand = GlobalFunctions.Instance.getOVRHands()[0];
         rHand = GlobalFunctions.Instance.getOVRHands()[1];
@@ -22,6 +24,12 @@ public class HUDEffectTrigger : HUDEffects
     // Update is called once per frame
     void Update()
     {
+        if (!inUse)
+        {
+            return;
+        }
+            
+        
         if (inArea)
         {
             foreach (GameObject child in children)
@@ -45,6 +53,11 @@ public class HUDEffectTrigger : HUDEffects
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!inUse)
+        {
+            return;
+        }
+
         if (other.gameObject.transform.parent.parent.parent.name.Contains("Left") || other.gameObject.transform.parent.parent.parent.name.Contains("Right"))
         {
             inArea = true;
@@ -55,6 +68,10 @@ public class HUDEffectTrigger : HUDEffects
 
     private void OnTriggerExit(Collider other)
     {
+        if (!inUse)
+        {
+            return;
+        }
         if (other.gameObject.transform.parent.parent.parent.name.Contains("Left") || other.gameObject.transform.parent.parent.parent.name.Contains("Right"))
         {
             inArea = false;
