@@ -138,4 +138,3 @@ Material:
     - _PinchPosition: {r: 0, g: 0, b: 0, a: 0}
     - _WristLocalOffset: {r: -0.01, g: 0.01, b: 0, a: 0}
     - _WristPosition: {r: 0, g: 0, b: 0, a: 0}
-  m_BuildTextureStacks: []

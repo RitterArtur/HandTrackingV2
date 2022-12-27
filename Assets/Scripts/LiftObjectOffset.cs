@@ -6,7 +6,7 @@ using Oculus.Interaction.HandPosing;
 
 public class LiftObjectOffset : MonoBehaviour
 {
-
+    [Range(0, 0.8f)]public float weight;
     private GameObject leftHandVisual;
     private GameObject rightHandVisual;
     private GameObject leftOVRHand;
@@ -22,9 +22,8 @@ public class LiftObjectOffset : MonoBehaviour
     private bool grabbedWithLeftHand;
     private bool active;
     private float yOffset;
-    public float weight;
     private bool inUse;
-    
+
 
 
     // Start is called before the first frame update

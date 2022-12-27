@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DenseSpace : MonoBehaviour
 {
-    public float Density;
+    [Range(0, 0.8f)]public float Density;
 
     // Transforms and Vectors to calculate Offset and move Hand accordingly
     private Transform actualPosition;
